@@ -1,1 +1,2 @@
-# daily-learning
+## 2026-02-17 学习日志
+今天配置好了 git 克隆和 VS Code 快捷指令。
