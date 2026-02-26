@@ -1,11 +1,10 @@
 ## 2026-02-25 Learning Log
-Skill-RL
+Skill-RL  
 The most fundamental and core formula in deep learning and natural language processing (NLP). Its full name is the objective function of Supervised Fine-Tuning (SFT, supervised fine-tuning).
 
 ```math
 \theta_{\text{sft}} = \arg\min_{\theta} \mathcal{L}_{\mathrm{CE}}(D_{\mathrm{SFT}};\theta)
 ```
-
 Meaning: find parameters θ minimizing cross-entropy loss on SFT dataset.
 
 ## 2026-02-24 Learning Log
