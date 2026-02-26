@@ -1,5 +1,15 @@
+## 2026-02-25 Learning Log
+Skill-RL
+The most fundamental and core formula in deep learning and natural language processing (NLP). Its full name is the objective function of Supervised Fine-Tuning (SFT, supervised fine-tuning).
+$$
+\theta_{\text{sft}} = \arg\min_{\theta} \mathcal{L}_{\mathrm{CE}}(D_{\mathrm{SFT}};\theta)
+$$
+Meaning: find parameters θ minimizing cross-entropy loss on SFT dataset.
 ## 2026-02-24 Learning Log
 Skill-RL
+1. Transform redundant trajectories into concise and actionable knowledge.
+2. Put distilled experiences into skill library S (classified general and task-specific expertise)
+3. Use RL to refine the skill Library S and agent's policy.
 
 ## 2026-02-23 Learning Log
 Learned how to install agent skills (planning-with-files) for claude code. 
