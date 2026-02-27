@@ -1,3 +1,10 @@
+## 2026-02-26 Learning Log
+Skill-RL  
+Two core mechanisms:
+1. High-level skill abstraction： By leveraging a powerful teacher model, the lengthy and noisy original success and failure trajectories are distilled and refined into a structured skill library (SKILLBANK) that encompasses general strategies and specialized techniques. This approach replaces rote memorization with highly condensed and reusable behavioral principles, achieving a 10-20 times reduction in Token compression while significantly enhancing the efficiency of intelligent search and reasoning.
+
+2. Co-evolving library: By using recursive skill evolution. Low success rate will collect failure trajectories and utilize the teacher model to propose new skills or modify the ineffective old skills.
+
 ## 2026-02-25 Learning Log
 Skill-RL  
 The most fundamental and core formula in deep learning and natural language processing (NLP). Its full name is the objective function of Supervised Fine-Tuning (SFT, supervised fine-tuning).
