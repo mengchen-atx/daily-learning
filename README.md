@@ -1,3 +1,25 @@
+## 2026-02-27 Learning Log
+Skill-RL
+Deepened understanding of the project architecture by mapping the three core contributions from the paper to the actual codebase:
+
+1. **Skill Generation (Distilling Experience)**: The `skill_generation/` module implements the distillation process that converts raw trajectories into structured skills. This is where the teacher model's guidance transforms lengthy experience sequences into concise, actionable knowledge.
+
+2. **SkillBank (Skill Library)**: Located in `agent_system/memory/`, this module manages the persistent storage and organization of the skill library. It serves as the central knowledge repository that supports both skill retrieval during inference and skill updates during the co-evolution process.
+
+3. **RL Training (Policy Evolution)**: The combination of `gigpo/`, `verl/`, and `recipe/` modules handles the reinforcement learning pipeline. This where the skill library and policy are jointly optimized through feedback from failed trajectories and new skill proposals.
+
+  ---
+  项目整体架构（从论文的 3 个核心贡献对应到代码）
+
+  论文概念                    对应代码位置
+  ─────────────────────────────────────────────────────
+  ① Skill 生成（蒸馏经验）   skill_generation/
+  ② SkillBank（技能库）       agent_system/memory/
+  ③ RL 训练（策略进化）       gigpo/ + verl/ + recipe/
+
+
+
+
 ## 2026-02-26 Learning Log
 Skill-RL  
 Two core mechanisms:
