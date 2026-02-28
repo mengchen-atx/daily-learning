@@ -1,3 +1,6 @@
+## 2026-02-28 Learning Log
+Rosalind
+
 ## 2026-02-27 Learning Log
 Skill-RL
 Deepened understanding of the project architecture by mapping the three core contributions from the paper to the actual codebase:
