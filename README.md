@@ -1,3 +1,9 @@
+## 2026-03-02 Learning Log
+Rosalind
+
+## 2026-03-01 Learning Log
+Rosalind
+
 ## 2026-02-28 Learning Log
 Rosalind
 
