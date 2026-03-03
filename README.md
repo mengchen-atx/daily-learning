@@ -1,5 +1,6 @@
 ## 2026-03-02 Learning Log
-Rosalind
+Deep Learning:
+Learned the environment. Installed jupyter,d2l,torch,torchvision.
 
 ## 2026-03-01 Learning Log
 Rosalind
