@@ -1,6 +1,6 @@
 ## 2026-03-02 Learning Log
 Deep Learning:
-Learned the basic data manipulation
+Learned the basic data manipulation, broadcasting mechanism
 
 ## 2026-03-02 Learning Log
 Deep Learning:
