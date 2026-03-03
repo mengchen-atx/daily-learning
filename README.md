@@ -1,5 +1,9 @@
 ## 2026-03-02 Learning Log
 Deep Learning:
+Learned the basic data manipulation
+
+## 2026-03-02 Learning Log
+Deep Learning:
 Learned the environment. Installed jupyter,d2l,torch,torchvision.
 
 ## 2026-03-01 Learning Log
