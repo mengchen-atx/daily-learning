@@ -1,4 +1,12 @@
-## 2026-03-02 Learning Log
+## 2026-03-05 Learning Log
+Deep Learning:
+Learned linear algebra
+
+## 2026-03-04 Learning Log
+Deep Learning:
+Learned data pre-processing
+
+## 2026-03-03 Learning Log
 Deep Learning:
 Learned the basic data manipulation, broadcasting mechanism
 
