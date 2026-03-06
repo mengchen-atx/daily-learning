@@ -1,4 +1,3 @@
-
 ## 2026-03-05 Learning Log
 Deep Learning:
 Learned matrix calculation, linear algebra
