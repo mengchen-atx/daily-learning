@@ -1,7 +1,20 @@
+## 2026-03-06 Learning Log
+Deep Learning:
+Learned the fundamental loss function in linear regression and optimization:
+
+1. **Training Loss (Mean Squared Error)**:
+$$\ell(\mathbf{X}, \mathbf{y}, \mathbf{w}, b) = \frac{1}{2n} \sum_{i=1}^{n} (y_i - \langle \mathbf{x}_i, \mathbf{w} \rangle - b)^2 = \frac{1}{2n} \| \mathbf{y} - \mathbf{X}\mathbf{w} - b \|^2$$
+
+This formula represents the Mean Squared Error (MSE) loss function, which measures the average squared difference between predicted values and actual labels. The vectorized form on the right side enables efficient batch computation.
+
+2. **Optimal Parameter Learning**:
+$$\mathbf{w}^*, b^* = \arg\min_{\mathbf{w},b} \ell(\mathbf{X}, \mathbf{y}, \mathbf{w}, b)$$
+
+This formula defines the optimization objective: find the weight vector $\mathbf{w}^*$ and bias $b^*$ that minimize the training loss. This is the core principle behind parameter learning in linear regression models.
+
 ## 2026-03-05 Learning Log
 Deep Learning:
 Learned matrix calculation, linear algebra
-
 
 ## 2026-03-04 Learning Log
 Deep Learning:
