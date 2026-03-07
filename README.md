@@ -1,3 +1,4 @@
+
 ## 2026-03-06 Learning Log
 Deep Learning:
 Learned the fundamental loss function in linear regression and optimization:
@@ -16,6 +17,14 @@ This formula represents the Mean Squared Error (MSE) loss function, which measur
 ```
 
 This formula defines the optimization objective: find the weight vector $\mathbf{w}^*$ and bias $b^*$ that minimize the training loss. This is the core principle behind parameter learning in linear regression models.
+
+3. **Gradient Descent Update Rule**:
+
+```math
+\mathbf{w}_t = \mathbf{w}_{t-1} - \eta \frac{\partial \ell}{\partial \mathbf{w}_{t-1}}
+```
+
+This formula represents the gradient descent optimization algorithm, where $\mathbf{w}_t$ is the updated weight vector at iteration $t$, $\eta$ is the learning rate (step size), and $\frac{\partial \ell}{\partial \mathbf{w}_{t-1}}$ is the gradient of the loss function with respect to the weights. This iterative process gradually minimizes the loss by moving in the direction of steepest descent.
 
 ## 2026-03-05 Learning Log
 Deep Learning:
