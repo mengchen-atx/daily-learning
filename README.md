@@ -1,3 +1,5 @@
+## 2026-03-08 Learning Log
+
 ## 2026-03-07 Learning Log
 
 ## 2026-03-06 Learning Log
