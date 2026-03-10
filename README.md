@@ -5,6 +5,8 @@
 ## 2026-03-07 Learning Log
 One counter-intuitive thing is that a smaller batch size leads to better convergence.
 
+When transferring to numpy, there is no need to calculate the gradient. Use the detach() function.
+
 ## 2026-03-06 Learning Log
 Deep Learning:
 Learned the fundamental loss function in linear regression and optimization:
