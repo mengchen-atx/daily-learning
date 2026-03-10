@@ -1,6 +1,12 @@
+#
 ## 2026-03-09 Learning Log
+Softmax function is used to categorize the sample.
+```math
+\text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}
+```
 
 ## 2026-03-08 Learning Log
+When calculating each batch, the gradients need to be reset to zero first.
 
 ## 2026-03-07 Learning Log
 One counter-intuitive thing is that a smaller batch size leads to better convergence.
