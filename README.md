@@ -1,4 +1,5 @@
-#
+## 2026-03-09 Learning Log
+
 ## 2026-03-09 Learning Log
 Softmax function is used to categorize the sample.
 ```math
