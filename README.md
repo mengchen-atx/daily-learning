@@ -1,3 +1,25 @@
+## 2026-03-16 Learning Log
+Deep Learning:
+Learned the cross-entropy loss function, which is fundamental for multi-class classification problems.
+
+**Cross-Entropy Loss Definition**:
+
+Cross-entropy measures the difference between the true probability distribution and the predicted probability distribution. It quantifies how well the model's predictions match the ground truth labels.
+
+**Formula**:
+
+```math
+\mathcal{L}_{\text{CE}} = -\frac{1}{n} \sum_{i=1}^{n} \sum_{j=1}^{k} y_{i,j} \log(\hat{y}_{i,j})
+```
+
+Where:
+- $n$ is the batch size
+- $k$ is the number of classes
+- $y_{i,j}$ is 1 if sample $i$ belongs to class $j$, and 0 otherwise (one-hot encoded)
+- $\hat{y}_{i,j}$ is the predicted probability that sample $i$ belongs to class $j$ (output from softmax)
+
+In PyTorch, this is commonly implemented as `torch.nn.CrossEntropyLoss()`, which combines softmax and cross-entropy for numerical stability and efficiency.
+
 ## 2026-03-12 Learning Log
 Deep Learning:
 Learned PyTorch advanced indexing technique - fancy indexing:
