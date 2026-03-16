@@ -6,6 +6,7 @@ Learned PyTorch advanced indexing technique - fancy indexing:
 y_hat[range(len(y_hat)), y]
 ```
 
+
 ## 2026-03-09 Learning Log
 Softmax function is used to categorize the sample.
 ```math
