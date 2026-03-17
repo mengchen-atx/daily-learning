@@ -6,6 +6,7 @@ Learned the cross-entropy loss function, which is fundamental for multi-class cl
 
 Cross-entropy measures the difference between the true probability distribution and the predicted probability distribution. It quantifies how well the model's predictions match the ground truth labels.
 
+
 **Formula**:
 
 ```math
@@ -19,6 +20,8 @@ Where:
 - $\hat{y}_{i,j}$ is the predicted probability that sample $i$ belongs to class $j$ (output from softmax)
 
 In PyTorch, this is commonly implemented as `torch.nn.CrossEntropyLoss()`, which combines softmax and cross-entropy for numerical stability and efficiency.
+
+In essence, cross-entropy is $-\log(\text{probability of the correct class})$, which penalizes incorrect predictions and encourages the model to assign high probability to the true class.
 
 ## 2026-03-12 Learning Log
 Deep Learning:
