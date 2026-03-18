@@ -6,7 +6,6 @@ Learned the cross-entropy loss function, which is fundamental for multi-class cl
 
 Cross-entropy measures the difference between the true probability distribution and the predicted probability distribution. It quantifies how well the model's predictions match the ground truth labels.
 
-
 **Formula**:
 
 ```math
