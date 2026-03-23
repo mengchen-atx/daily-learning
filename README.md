@@ -5,7 +5,6 @@ Learned an important principle about neural network architecture: deep networks 
 While shallow and wide networks can theoretically achieve similar representational capacity, they are prone to overfitting and are difficult to train effectively. Deep and narrow networks better leverage the hierarchical nature of deep learning, where each layer learns increasingly abstract features from the previous layer. This architectural principle is fundamental to modern deep neural network design.
 
 
-
 ## 2026-03-16 Learning Log
 Deep Learning:
 Learned the cross-entropy loss function, which is fundamental for multi-class classification problems.
