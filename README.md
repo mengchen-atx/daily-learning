@@ -2,6 +2,7 @@
 Deep Learning:
 Learned an important principle about neural network architecture: deep networks should be deep and narrow (many layers with fewer neurons per layer) rather than shallow and wide (few layers with many neurons per layer).
 
+
 While shallow and wide networks can theoretically achieve similar representational capacity, they are prone to overfitting and are difficult to train effectively. Deep and narrow networks better leverage the hierarchical nature of deep learning, where each layer learns increasingly abstract features from the previous layer. This architectural principle is fundamental to modern deep neural network design.
 
 
