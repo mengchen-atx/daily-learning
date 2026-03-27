@@ -1,8 +1,48 @@
+## 2026-03-27 Learning Log
+Mathematics - Spherical Harmonics:
+
+Learned about **Spherical Harmonics** ($Y_l^m(\theta, \phi)$), which are fundamental eigenfunctions of the Laplacian operator on the surface of a sphere.
+
+**Key Concepts**:
+
+1. **Definition**: Spherical harmonics are special functions defined on the 2-sphere surface, analogous to Fourier series on a circle. They form a complete orthonormal basis for functions on the sphere.
+
+2. **Mathematical Form**:
+```math
+Y_l^m(\theta, \phi) = \sqrt{\frac{2l+1}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}} P_l^{|m|}(\cos\theta) e^{im\phi}
+```
+
+Where:
+- $l = 0, 1, 2, \ldots$ (degree/order parameter)
+- $m = -l, -l+1, \ldots, l-1, l$ (magnetic quantum number)
+- $\theta \in [0, \pi]$ (polar angle)
+- $\phi \in [0, 2\pi)$ (azimuthal angle)
+- $P_l^{|m|}$ are associated Legendre polynomials
+
+3. **Orthonormality Property**:
+```math
+\int_0^{2\pi} d\phi \int_0^{\pi} \sin\theta \, d\theta \, Y_l^m(\theta, \phi)^* Y_{l'}^{m'}(\theta, \phi) = \delta_{ll'} \delta_{mm'}
+```
+
+4. **Applications**: Spherical harmonics are widely used in:
+   - Quantum mechanics (atomic orbitals, angular momentum)
+   - Computer graphics (lighting, 3D rotations)
+   - Cosmology (cosmic microwave background analysis)
+   - Signal processing on spheres
+
+5. **Key Property**: Any function on a sphere can be expanded as:
+```math
+f(\theta, \phi) = \sum_{l=0}^{\infty} \sum_{m=-l}^{l} a_{lm} Y_l^m(\theta, \phi)
+```
+
+This expansion is the spherical analogue of Fourier series in 2D Cartesian coordinates.
+
 ## 2026-03-19 Learning Log
 Deep Learning:
 Learned an important principle about neural network architecture: deep networks should be deep and narrow (many layers with fewer neurons per layer) rather than shallow and wide (few layers with many neurons per layer).
 
 While shallow and wide networks can theoretically achieve similar representational capacity, they are prone to overfitting and are difficult to train effectively. Deep and narrow networks better leverage the hierarchical nature of deep learning, where each layer learns increasingly abstract features from the previous layer. This architectural principle is fundamental to modern deep neural network design.
+
 
 
 ## 2026-03-16 Learning Log
