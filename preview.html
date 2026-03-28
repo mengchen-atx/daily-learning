@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README Preview</title>
+    <!-- KaTeX for math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+    
+    <!-- markdown-it for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@13/dist/markdown-it.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            background-color: #fff;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 40px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        
+        h3 {
+            font-size: 1.25em;
+            font-weight: 600;
+            margin-top: 16px;
+            margin-bottom: 12px;
+        }
+        
+        p {
+            margin-bottom: 16px;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        code {
+            background-color: #f6f8fa;
+            padding: 0.2em 0.4em;
+            margin: 0;
+            font-size: 85%;
+            border-radius: 3px;
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+        }
+        
+        pre {
+            background-color: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 16px;
+            overflow: auto;
+            margin-bottom: 16px;
+        }
+        
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            font-size: 100%;
+            border-radius: 0;
+        }
+        
+        ul, ol {
+            padding-left: 2em;
+            margin-bottom: 16px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .math-display {
+            overflow-x: auto;
+            margin: 16px 0;
+            padding: 12px;
+            background-color: #f6f8fa;
+            border-radius: 6px;
+        }
+        
+        .katex-display {
+            overflow-x: auto;
+        }
+        
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        blockquote {
+            padding: 0 1em;
+            color: #6a737d;
+            border-left: 0.25em solid #dfe2e5;
+            margin: 0 0 16px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="content"></div>
+    
+    <script>
+        // Fetch and render README.md
+        fetch('README.md')
+            .then(response => response.text())
+            .then(readmeContent => {
+                // Create markdown-it instance
+                const md = window.markdownit({
+                    html: false,
+                    breaks: true,
+                    linkify: false
+                });
+                
+                // Handle GitHub-style math blocks (```math ... ```)
+                md.block.ruler.before('fence', 'math_fence', function(state, startLine, endLine, silent) {
+                    const pos = state.bMarks[startLine] + state.tShift[startLine];
+                    const maximum = state.eMarks[startLine];
+                    
+                    if (pos + 3 > maximum) return false;
+                    if (state.src.slice(pos, pos + 3) !== '```') return false;
+                    
+                    const markup = '```';
+                    const params = state.src.slice(pos + 3, maximum).trim();
+                    
+                    if (params !== 'math') return false;
+                    
+                    let nextLine = startLine + 1;
+                    let found = false;
+                    let content = [];
+                    
+                    while (nextLine < endLine) {
+                        const posEnd = state.bMarks[nextLine] + state.tShift[nextLine];
+                        const maxEnd = state.eMarks[nextLine];
+                        
+                        if (posEnd < maxEnd && state.src.slice(posEnd, posEnd + 3) === '```') {
+                            found = true;
+                            break;
+                        }
+                        
+                        content.push(state.src.slice(state.bMarks[nextLine], state.eMarks[nextLine]));
+                        nextLine++;
+                    }
+                    
+                    if (!found) return false;
+                    if (silent) return true;
+                    
+                    const token = state.push('math_block', 'div', 0);
+                    token.content = content.join('\n');
+                    token.map = [startLine, nextLine + 1];
+                    
+                    state.line = nextLine + 1;
+                    return true;
+                }, { alt: ['paragraph', 'reference', 'blockquote', 'list'] });
+                
+                // Renderer for math blocks
+                md.renderer.rules.math_block = function(tokens, idx) {
+                    const token = tokens[idx];
+                    try {
+                        const html = katex.renderToString(token.content, { throwOnError: false, displayMode: true });
+                        return '<div class="math-display">' + html + '</div>\n';
+                    } catch (e) {
+                        return '<div class="math-display"><pre>' + token.content + '</pre></div>\n';
+                    }
+                };
+                
+                // Handle inline math
+                const defaultRender = md.renderer.rules.text || function(tokens, idx) { 
+                    return tokens[idx].content;
+                };
+                
+                md.renderer.rules.text = function (tokens, idx) {
+                    let content = tokens[idx].content;
+                    
+                    // Handle inline math with single $
+                    content = content.replace(/\$([^\$\n]+)\$/g, function(match, formula) {
+                        try {
+                            return katex.renderToString(formula, { throwOnError: false, displayMode: false });
+                        } catch (e) {
+                            return match;
+                        }
+                    });
+                    
+                    return content;
+                };
+                
+                // Render markdown
+                const html = md.render(readmeContent);
+                document.getElementById('content').innerHTML = html;
+            })
+            .catch(err => {
+                document.getElementById('content').innerHTML = '<p style="color: red;">Error loading README.md: ' + err + '</p>';
+            });
+    </script>
+</body>
+</html>

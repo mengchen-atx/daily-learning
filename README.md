@@ -1,3 +1,7 @@
+## 2026-03-28 Learning Log
+Graph Theory:
+Learned about **graphs** $G = (V, E)$ - a fundamental data structure with vertices and edges. Can be directed or undirected, weighted or unweighted. Key representations: adjacency matrix and adjacency list.
+
 ## 2026-03-27 Learning Log
 Mathematics - Spherical Harmonics:
 
