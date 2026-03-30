@@ -2,6 +2,9 @@
 Graph Theory:
 Learned about **graphs** $G = (V, E)$ - a fundamental data structure with vertices and edges. Can be directed or undirected, weighted or unweighted. Key representations: adjacency matrix and adjacency list.
 
+Also learned about **Canonical Labeling** (标准标号) - a way to label graph vertices so that isomorphic graphs get the same labeling.
+
+
 ## 2026-03-27 Learning Log
 Mathematics - Spherical Harmonics:
 
