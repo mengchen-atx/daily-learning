@@ -1,3 +1,7 @@
+## 2026-03-31 Learning Log
+MRF:
+Learned about Markov Random Field (MRF) — an undirected probabilistic graphical model describing joint distributions with local interactions.
+
 ## 2026-03-28 Learning Log
 Graph Theory:
 Learned about **graphs** $G = (V, E)$ - a fundamental data structure with vertices and edges. Can be directed or undirected, weighted or unweighted. Key representations: adjacency matrix and adjacency list.
