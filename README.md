@@ -2,6 +2,7 @@
 MRF:
 Learned about Markov Random Field (MRF) — an undirected probabilistic graphical model describing joint distributions with local interactions.
 
+
 ## 2026-03-30 Learning Log
 Random Forest:
 随机森林的随机性体现在 Bootstrap（样本自助采样）和 Feature Randomness（特征随机选择）。
