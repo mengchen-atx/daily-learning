@@ -1,8 +1,10 @@
+## 2026-04-05 Learning Log
+MRF — Cycle Consistency:
+Learned about cycle consistency in Markov Random Fields: local potentials around cycles should agree so the global joint distribution remains coherent; used as a constraint in inference.
+
 ## 2026-03-31 Learning Log
 MRF:
 Learned about Markov Random Field (MRF) — an undirected probabilistic graphical model describing joint distributions with local interactions.
-
-
 ## 2026-03-30 Learning Log
 Random Forest:
 随机森林的随机性体现在 Bootstrap（样本自助采样）和 Feature Randomness（特征随机选择）。
