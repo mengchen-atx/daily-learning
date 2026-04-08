@@ -3,7 +3,6 @@ MRF — Cycle Consistency:
 Learned about cycle consistency in Markov Random Fields: local potentials around cycles should agree so the global joint distribution remains coherent; used as a constraint in inference.
 
 
-
 ## 2026-03-31 Learning Log
 MRF:
 Learned about Markov Random Field (MRF) — an undirected probabilistic graphical model describing joint distributions with local interactions.
